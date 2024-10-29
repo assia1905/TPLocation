@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- En-tête avec le titre de l'écran -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Localisation"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <!-- Image en haut pour un visuel de bienvenue -->
+    <ImageView
+        android:id="@+id/welcome_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/location"
+        android:scaleType="centerCrop"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="6dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- CardView pour afficher les informations de latitude et longitude -->
+    <LinearLayout
+        android:id="@+id/info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/welcome_image"
+        android:layout_marginTop="16dp"
+        android:padding="24dp"
+        android:background="@drawable/rounded_card_background"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pour afficher vos coordonnées, appuyez sur le bouton ci-dessous."
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Coordonnées Latitude -->
+        <TextView
+            android:id="@+id/latitudeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-medium"
+            android:text="Latitude :"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"
+            android:textStyle="italic" />
+
+        <!-- Coordonnées Longitude -->
+        <TextView
+            android:id="@+id/longitudeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-medium"
+            android:text="Longitude :"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <!-- Bouton pour afficher la localisation actuelle -->
+    <Button
+        android:id="@+id/getLocationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_card"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3E92CC"
+        android:text="Afficher Latitude et Longitude"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="4dp" />
+
+    <!-- Bouton pour accéder à la carte -->
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getLocationButton"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Voir la carte"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:elevation="4dp" />
+
+</RelativeLayout>
